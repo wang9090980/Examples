@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="me.xiaopan.examples"
+    package="me.xiaopan.examples.android"
     android:versionCode="100"
     android:versionName="1.0.0" >
 
@@ -37,41 +37,41 @@
     <uses-feature android:name="android.hardware.location.gps"/>
 
     <!-- 声明应用需要的各种组件 -->
-    <application android:allowBackup="true" android:icon="@drawable/icon_launcher" android:label="@string/app_name" android:theme="@style/AppTheme" android:name="me.xiaopan.examples.MyApplication" >
-		<activity android:name="me.xiaopan.examples.activity.MainActivity" android:label="@string/app_name">
+    <application android:allowBackup="true" android:icon="@drawable/icon_launcher" android:label="@string/app_name" android:theme="@style/AppTheme" android:name="me.xiaopan.examples.android.MyApplication" >
+		<activity android:name="me.xiaopan.examples.android.activity.MainActivity" android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
              </intent-filter>
         </activity>
-       	<activity android:name="me.xiaopan.examples.activity.AnimationsActivity" android:label="@string/activityTitle_animations"/>
-       	<activity android:name="me.xiaopan.examples.activity.custom.CustomEditTextActivity" android:label="@string/activityTitle_customEditText"/>
-    	<activity android:name="me.xiaopan.examples.activity.CustomsActivity" android:label="@string/activityTitle_custom"/>
-       	<activity android:name="me.xiaopan.examples.activity.custom.PicturePlayerActivity" android:label="@string/activityTitle_picturePlayer"/>
-       	<activity android:name="me.xiaopan.examples.activity.custom.ReboundListActivity" android:label="@string/activityTitle_reboundListView"/>
-       	<activity android:name="me.xiaopan.examples.activity.custom.SlideTabHostActivity" android:label="@string/activityTitle_slideTabHost"/>
-       	<activity android:name="me.xiaopan.examples.activity.custom.SlidingToggleButtonActivity" android:label="@string/activityTitle_slidingToggleButton"/>
-       	<activity android:name="me.xiaopan.examples.activity.custom.SuperListViewActivity" android:label="@string/activityTitle_superListView"/>
-    	<activity android:name="me.xiaopan.examples.activity.graphics.CameraPreviewActivity" android:label="@string/activityTitle_cameraPreview"/>
-   		<activity android:name="me.xiaopan.examples.activity.graphics.ClipDrawableActivity" android:label="@string/activityTitle_clipDrawable"/>
-   		<activity android:name="me.xiaopan.examples.activity.GraphicsActivity" android:label="@string/activityTitle_graphics"/>
-   		<activity android:name="me.xiaopan.examples.activity.graphics.RotateDrawableActivity" android:label="@string/activityTitle_rotateDrawable"/>
-   		<activity android:name="me.xiaopan.examples.activity.MediasActivity" android:label="@string/activityTitle_medias"/>
-     	<activity android:name="me.xiaopan.examples.activity.other.AccessNetworkActivity" android:label="@string/activityTitle_accessNetwork"/>
-     	<activity android:name="me.xiaopan.examples.activity.other.DownloadImageActivity" android:label="@string/activityTitle_downloadImage"/>
-    	<activity android:name="me.xiaopan.examples.activity.other.ImageLoaderActivity" android:label="@string/activityTitle_imageLoader"/>
-   		<activity android:name="me.xiaopan.examples.activity.OthersActivity" android:label="@string/activityTitle_others"/>
-   		<activity android:name="me.xiaopan.examples.activity.other.TakeBusinessCardActivity" android:label="@string/activityTitle_takeBusinessCard"/>
-       	<activity android:name="me.xiaopan.examples.activity.views.ProgressBarActivity" android:label="@string/activityTitle_progressBar"/>
-       	<activity android:name="me.xiaopan.examples.activity.views.TabHostActivity" android:label="@string/activityTitle_tabHost"/>
-       	<activity android:name="me.xiaopan.examples.activity.views.TabContentActivity"/>
-      	<activity android:name="me.xiaopan.examples.activity.views.ViewPagerActivity" android:label="@string/activityTitle_viewPager"/>
-   		<activity android:name="me.xiaopan.examples.activity.ViewsActivity" android:label="@string/activityTitle_views"/>
-   		<activity android:name="me.xiaopan.examples.activity.views.FragmentTabHostActivity" android:label="@string/activityTitle_fragmentTabHost"/>
-  		<activity android:name="me.xiaopan.examples.activity.views.FloatingWindowActivity" android:label="@string/activityTitle_floatingWindow"/>
-  		<activity android:name="me.xiaopan.examples.activity.views.GalleryActivity" android:label="@string/activityTitle_gallery"/>
+       	<activity android:name="me.xiaopan.examples.android.activity.AnimationsActivity" android:label="@string/activityTitle_animations"/>
+       	<activity android:name="me.xiaopan.examples.android.activity.custom.CustomEditTextActivity" android:label="@string/activityTitle_customEditText"/>
+    	<activity android:name="me.xiaopan.examples.android.activity.CustomsActivity" android:label="@string/activityTitle_custom"/>
+       	<activity android:name="me.xiaopan.examples.android.activity.custom.PicturePlayerActivity" android:label="@string/activityTitle_picturePlayer"/>
+       	<activity android:name="me.xiaopan.examples.android.activity.custom.ReboundListActivity" android:label="@string/activityTitle_reboundListView"/>
+       	<activity android:name="me.xiaopan.examples.android.activity.custom.SlideTabHostActivity" android:label="@string/activityTitle_slideTabHost"/>
+       	<activity android:name="me.xiaopan.examples.android.activity.custom.SlidingToggleButtonActivity" android:label="@string/activityTitle_slidingToggleButton"/>
+       	<activity android:name="me.xiaopan.examples.android.activity.custom.SuperListViewActivity" android:label="@string/activityTitle_superListView"/>
+    	<activity android:name="me.xiaopan.examples.android.activity.graphics.CameraPreviewActivity" android:label="@string/activityTitle_cameraPreview"/>
+   		<activity android:name="me.xiaopan.examples.android.activity.graphics.ClipDrawableActivity" android:label="@string/activityTitle_clipDrawable"/>
+   		<activity android:name="me.xiaopan.examples.android.activity.GraphicsActivity" android:label="@string/activityTitle_graphics"/>
+   		<activity android:name="me.xiaopan.examples.android.activity.graphics.RotateDrawableActivity" android:label="@string/activityTitle_rotateDrawable"/>
+   		<activity android:name="me.xiaopan.examples.android.activity.MediasActivity" android:label="@string/activityTitle_medias"/>
+     	<activity android:name="me.xiaopan.examples.android.activity.other.AccessNetworkActivity" android:label="@string/activityTitle_accessNetwork"/>
+     	<activity android:name="me.xiaopan.examples.android.activity.other.DownloadImageActivity" android:label="@string/activityTitle_downloadImage"/>
+    	<activity android:name="me.xiaopan.examples.android.activity.other.ImageLoaderActivity" android:label="@string/activityTitle_imageLoader"/>
+   		<activity android:name="me.xiaopan.examples.android.activity.OthersActivity" android:label="@string/activityTitle_others"/>
+   		<activity android:name="me.xiaopan.examples.android.activity.other.TakeBusinessCardActivity" android:label="@string/activityTitle_takeBusinessCard"/>
+       	<activity android:name="me.xiaopan.examples.android.activity.view.ProgressBarActivity" android:label="@string/activityTitle_progressBar"/>
+       	<activity android:name="me.xiaopan.examples.android.activity.view.TabHostActivity" android:label="@string/activityTitle_tabHost"/>
+       	<activity android:name="me.xiaopan.examples.android.activity.view.TabContentActivity"/>
+      	<activity android:name="me.xiaopan.examples.android.activity.view.ViewPagerActivity" android:label="@string/activityTitle_viewPager"/>
+   		<activity android:name="me.xiaopan.examples.android.activity.ViewsActivity" android:label="@string/activityTitle_views"/>
+   		<activity android:name="me.xiaopan.examples.android.activity.view.FragmentTabHostActivity" android:label="@string/activityTitle_fragmentTabHost"/>
+  		<activity android:name="me.xiaopan.examples.android.activity.view.FloatingWindowActivity" android:label="@string/activityTitle_floatingWindow"/>
+  		<activity android:name="me.xiaopan.examples.android.activity.view.GalleryActivity" android:label="@string/activityTitle_gallery"/>
      		
-    	<service android:name="me.xiaopan.examples.service.FloatingWindowService"/>
+    	<service android:name="me.xiaopan.examples.android.service.FloatingWindowService"/>
     </application>
 
 </manifest>

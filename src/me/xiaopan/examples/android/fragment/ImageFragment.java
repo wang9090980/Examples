@@ -25,14 +25,23 @@ import android.widget.ImageView;
 /**
  * 图片碎片
  */
-public class Image2Fragment extends BaseFragment {
-	public static final String PARAM_REQUIRED_IMAHE_RES_ID = "PARAM_REQUIRED_IMAHE_RES_ID";
+public class ImageFragment extends BaseFragment {
+	public static final String PARAM_REQIRED_INT_IMAGE_RES_ID = "PARAM_REQIRED_INT_IMAGE_RES_ID";
 	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-		ImageView imageView = new ImageView(getActivity().getBaseContext());
-		imageView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.FILL_PARENT, ViewGroup.LayoutParams.FILL_PARENT));
-		imageView.setImageResource(getArguments().getInt(PARAM_REQUIRED_IMAHE_RES_ID));
-		return imageView;
+		if(getArguments() != null){
+			int imageResId = getArguments().getInt(PARAM_REQIRED_INT_IMAGE_RES_ID, -1);
+			if(imageResId > -1){
+				ImageView imageView = new ImageView(getActivity().getBaseContext());
+				imageView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+				imageView.setImageResource(imageResId);
+				return imageView;
+			}else{
+				return null;
+			}
+		}else{
+			return null;
+		}
 	}
 }

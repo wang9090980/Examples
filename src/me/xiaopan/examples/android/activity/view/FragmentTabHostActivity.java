@@ -17,7 +17,7 @@ package me.xiaopan.examples.android.activity.view;
 
 import me.xiaopan.examples.android.MyBaseFragmentActivity;
 import me.xiaopan.examples.android.R;
-import me.xiaopan.examples.android.fragment.Image2Fragment;
+import me.xiaopan.examples.android.fragment.ImageFragment;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTabHost;
 import android.widget.TabHost.TabSpec;
@@ -50,10 +50,10 @@ public class FragmentTabHostActivity extends MyBaseFragmentActivity {
 		fragmentTabHost.setup(getBaseContext(), getSupportFragmentManager(), R.id.realtabcontent);
 		fragmentTabHost.getTabWidget().setDividerDrawable(R.drawable.tabs_divider);
 		
-		fragmentTabHost.addTab(createTabSpec(TAB_TAG_ONE, "选项卡1"), Image2Fragment.class, getBundle(R.drawable.image_liuyifei1));
-        fragmentTabHost.addTab(createTabSpec(TAB_TAG_TWO, "选项卡2"), Image2Fragment.class, getBundle(R.drawable.image_liuyifei2));
-        fragmentTabHost.addTab(createTabSpec(TAB_TAG_THREE, "选项卡3"), Image2Fragment.class, getBundle(R.drawable.image_liuyifei3));
-        fragmentTabHost.addTab(createTabSpec(TAB_TAG_FOUR, "选项卡4"), Image2Fragment.class, getBundle(R.drawable.image_liuyifei4));
+		fragmentTabHost.addTab(createTabSpec(TAB_TAG_ONE, "选项卡1"), ImageFragment.class, getBundle(R.drawable.image_liuyifei1));
+        fragmentTabHost.addTab(createTabSpec(TAB_TAG_TWO, "选项卡2"), ImageFragment.class, getBundle(R.drawable.image_liuyifei2));
+        fragmentTabHost.addTab(createTabSpec(TAB_TAG_THREE, "选项卡3"), ImageFragment.class, getBundle(R.drawable.image_liuyifei3));
+        fragmentTabHost.addTab(createTabSpec(TAB_TAG_FOUR, "选项卡4"), ImageFragment.class, getBundle(R.drawable.image_liuyifei4));
 	}
 	
 	private TabSpec createTabSpec(String tag, String title){
@@ -66,7 +66,7 @@ public class FragmentTabHostActivity extends MyBaseFragmentActivity {
 	
 	public Bundle getBundle(int imageResId){
 		Bundle bundle = new Bundle();
-		bundle.putInt(Image2Fragment.PARAM_REQUIRED_IMAHE_RES_ID, imageResId);
+		bundle.putInt(ImageFragment.PARAM_REQIRED_INT_IMAGE_RES_ID, imageResId);
 		return bundle;
 	}
 }

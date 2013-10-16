@@ -15,16 +15,12 @@
  */
 package me.xiaopan.examples.android.adapter;
 
-import me.xiaopan.easy.android.app.BaseFragment;
 import me.xiaopan.examples.android.R;
+import me.xiaopan.examples.android.fragment.ImageFragment;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ImageView;
 
 public class ImageFragmentPagerAdapter extends FragmentStatePagerAdapter {
 	private int[] images;
@@ -51,29 +47,5 @@ public class ImageFragmentPagerAdapter extends FragmentStatePagerAdapter {
 	@Override
 	public int getCount() {
 		return Integer.MAX_VALUE;
-	}
-	
-	/**
-	 * 图片碎片
-	 */
-	public static class ImageFragment extends BaseFragment {
-		public static final String PARAM_REQIRED_INT_IMAGE_RES_ID = "PARAM_REQIRED_INT_IMAGE_RES_ID";
-		
-		@Override
-		public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-			if(getArguments() != null){
-				int imageResId = getArguments().getInt(PARAM_REQIRED_INT_IMAGE_RES_ID, -1);
-				if(imageResId > -1){
-					ImageView imageView = new ImageView(getActivity().getBaseContext());
-					imageView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
-					imageView.setImageResource(imageResId);
-					return imageView;
-				}else{
-					return null;
-				}
-			}else{
-				return null;
-			}
-		}
 	}
 }

@@ -25,6 +25,7 @@ import android.view.MenuItem;
 
 import com.umeng.analytics.MobclickAgent;
 
+@SuppressWarnings("deprecation")
 public abstract class MyBaseTabActivity extends BaseTabActivity {
 	private boolean hiddenTitleBar;
 	private boolean enableBackHome = true;

@@ -24,6 +24,7 @@ import android.widget.Gallery;
 /**
  * 画廊使用示例
  */
+@SuppressWarnings("deprecation")
 public class GalleryActivity extends MyBaseActivity {
 	private Gallery gallery;
 	

@@ -20,7 +20,7 @@ import me.xiaopan.examples.android.util.ImageLoadOptionsFactory;
 import android.app.Application;
 
 public class MyApplication extends Application {
-	private boolean networkSpeedFloatingWindowDisplay;
+	private boolean floatingWindowDisplay;
 	
 	@Override
 	public void onCreate() {
@@ -29,11 +29,11 @@ public class MyApplication extends Application {
 		ImageLoader.getInstance().init(getBaseContext(), ImageLoadOptionsFactory.getDefaultImageLoadOptions(getBaseContext()));	//初始化图片加载器
 	}
 
-	public boolean isNetworkSpeedFloatingWindowDisplay() {
-		return networkSpeedFloatingWindowDisplay;
+	public boolean isFloatingWindowDisplay() {
+		return floatingWindowDisplay;
 	}
 
-	public void setNetworkSpeedFloatingWindowDisplay(boolean networkSpeedFloatingWindowDisplay) {
-		this.networkSpeedFloatingWindowDisplay = networkSpeedFloatingWindowDisplay;
+	public void setFloatingWindowDisplay(boolean floatingWindowDisplay) {
+		this.floatingWindowDisplay = floatingWindowDisplay;
 	}
 }

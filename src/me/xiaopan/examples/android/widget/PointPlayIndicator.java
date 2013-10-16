@@ -37,12 +37,12 @@ public class PointPlayIndicator extends BaseViewPlayIndicator {
 
 	@Override
 	public void onInit(int size) {
-		setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.FILL_PARENT));
+		setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
 		setGravity(Gravity.BOTTOM);
 		
 		//创建包括所有图标部分的布局
 		pointsLayout = new LinearLayout(getContext());
-		LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+		LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
 		pointsLayout.setLayoutParams(layoutParams);
 		pointsLayout.setGravity(Gravity.CENTER);
 		for(int w = 0; w < size; w++){//然后初始化所有的图标并将其放进存放图标的布局中

@@ -25,6 +25,7 @@ import android.widget.Gallery;
 import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
 
+@SuppressWarnings("deprecation")
 public class GalleryAdapter extends BaseAdapter{
 	private Context context;
 	private String[] urls;

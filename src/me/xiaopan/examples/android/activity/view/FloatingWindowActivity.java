@@ -39,7 +39,7 @@ public class FloatingWindowActivity extends MyBaseActivity {
 		button.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				if(getMyApplication().isNetworkSpeedFloatingWindowDisplay()){
+				if(getMyApplication().isFloatingWindowDisplay()){
 					stopService(networkSpeedFloatingService);
 					button.setText("打开悬浮窗");
 				}else{
@@ -53,11 +53,7 @@ public class FloatingWindowActivity extends MyBaseActivity {
 	@Override
 	public void onInitData(Bundle savedInstanceState) {
 		networkSpeedFloatingService = new Intent(this, FloatingWindowService.class);
-		uodateButtonText(getMyApplication().isNetworkSpeedFloatingWindowDisplay());
-	}
-
-	public void uodateButtonText(boolean state){
-		if(state){
+		if(getMyApplication().isFloatingWindowDisplay()){
 			button.setText("关闭悬浮窗");
 		}else{
 			button.setText("打开悬浮窗");

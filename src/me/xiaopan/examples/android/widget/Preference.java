@@ -91,7 +91,7 @@ public class Preference extends LinearLayout{
 		
 		//间隔
 		space = new TextView(getContext());
-		linearLayout.addView(space, new LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, 7));
+		linearLayout.addView(space, new LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 7));
 		
 		//副标题
 		subtitleText = new TextView(getContext());
@@ -106,7 +106,7 @@ public class Preference extends LinearLayout{
 		}
 		linearLayout.addView(subtitleText);
 		
-		addView(linearLayout, new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.FILL_PARENT, 1));
+		addView(linearLayout, new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.MATCH_PARENT, 1));
 		
 		if(typedArray != null){
 			defaultChecked = typedArray.getBoolean(R.styleable.Preference_checked, defaultChecked);

@@ -82,16 +82,16 @@ public class FloatingWindowService extends Service implements OnClickListener{
 	}
 
 	@Override
-	public void onStart(Intent intent, int startId) {
-		super.onStart(intent, startId);
-		myApplication.setNetworkSpeedFloatingWindowDisplay(true);
+	public int onStartCommand(Intent intent, int flags, int startId) {
+		myApplication.setFloatingWindowDisplay(true);
 		updateFloatingWindow();
+		return super.onStartCommand(intent, flags, startId);
 	}
 
 	@Override
 	public void onDestroy() {
 		super.onDestroy();
-		myApplication.setNetworkSpeedFloatingWindowDisplay(false);
+		myApplication.setFloatingWindowDisplay(false);
 		closeFloatingWindow();
 	}
 	

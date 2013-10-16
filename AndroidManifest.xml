@@ -4,7 +4,7 @@
     android:versionCode="100"
     android:versionName="1.0.0" >
 
-    <uses-sdk android:minSdkVersion="11" android:targetSdkVersion="18" />
+    <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="18" />
 
     <!-- 声明要使用的权限 -->
 	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
@@ -70,8 +70,12 @@
    		<activity android:name="me.xiaopan.examples.android.activity.widget.FragmentTabHostActivity" android:label="@string/activityTitle_fragmentTabHost"/>
   		<activity android:name="me.xiaopan.examples.android.activity.widget.FloatingWindowActivity" android:label="@string/activityTitle_floatingWindow"/>
   		<activity android:name="me.xiaopan.examples.android.activity.widget.GalleryActivity" android:label="@string/activityTitle_gallery"/>
+  		<activity android:name="me.xiaopan.examples.android.activity.widget.DrawerLayoutActivity" android:label="@string/activityTitle_drawerLayout"/>
      		
     	<service android:name="me.xiaopan.examples.android.service.FloatingWindowService"/>
+    	
+    	<meta-data android:name="UMENG_APPKEY" android:value="525e527a56240b4bde082b19"/>
+    	<meta-data android:name="Channel ID" android:value="Google Play"/>
     </application>
 
 </manifest>

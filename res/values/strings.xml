@@ -28,6 +28,7 @@
     <string name="activityTitle_fragmentTabHost">FragmentTabHost</string>
     <string name="activityTitle_viewPager">View Pager</string>
     <string name="activityTitle_gallery">Gallery</string>
+    <string name="activityTitle_drawerLayout">滑动抽屉</string>
     <string name="activityTitle_takeBusinessCard">拍名片</string>
     
     <string name="editHint_name">请输入姓名</string>
@@ -117,6 +118,7 @@
     <string name="hint_pullDownRefersh">下拉刷新</string>
     <string name="hint_cameraPreview_autoFocus">触摸屏幕对焦</string>
     <string name="hint_takeBusinessCard">名片尽量充满取景框，避免反光和阴影</string>
+    <string name="hint_drawer">这是一个滑动抽屉示例程序</string>
     
     <string name="toast_exitHint">再按一次退出程序</string>
     <string name="toast_checkUpdateing">正在检查更新，请稍后…</string>

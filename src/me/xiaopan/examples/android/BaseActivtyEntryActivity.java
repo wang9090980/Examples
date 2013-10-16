@@ -17,7 +17,6 @@ package me.xiaopan.examples.android;
 
 import java.util.List;
 
-import me.xiaopan.examples.android.R;
 import me.xiaopan.examples.android.adapter.TextAdapter;
 import me.xiaopan.examples.android.adapter.TextAdapter.Text;
 import me.xiaopan.examples.android.bean.ActivityEntry;

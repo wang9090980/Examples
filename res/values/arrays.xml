@@ -185,4 +185,15 @@
         <item>http://www.sinoace.net/android/a7_3.jpg</item>
         <item>http://www.sinoace.net/android/a7_4.jpg</item>
     </string-array>
+    
+    <string-array name="planets_array">
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Mars</item>
+        <item>Jupiter</item>
+        <item>Saturn</item>
+        <item>Uranus</item>
+        <item>Neptune</item>
+    </string-array>
 </resources>

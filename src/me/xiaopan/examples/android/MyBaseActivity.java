@@ -19,7 +19,6 @@ import me.xiaopan.easy.android.app.BaseActivity;
 import me.xiaopan.easy.android.app.OnDoubleClickPromptExitListener;
 import me.xiaopan.easy.android.app.OnExceptionFinishActivityListener;
 import me.xiaopan.easy.android.app.OnNetworkVerifyListener;
-import me.xiaopan.examples.android.R;
 import android.os.Bundle;
 import android.view.MenuItem;
 

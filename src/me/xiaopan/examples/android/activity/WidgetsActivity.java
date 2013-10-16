@@ -19,6 +19,7 @@ import java.util.ArrayList;
 
 import me.xiaopan.examples.android.BaseActivtyEntryActivity;
 import me.xiaopan.examples.android.R;
+import me.xiaopan.examples.android.activity.widget.DrawerLayoutActivity;
 import me.xiaopan.examples.android.activity.widget.FloatingWindowActivity;
 import me.xiaopan.examples.android.activity.widget.FragmentTabHostActivity;
 import me.xiaopan.examples.android.activity.widget.GalleryActivity;
@@ -43,6 +44,7 @@ public class WidgetsActivity extends BaseActivtyEntryActivity{
 		texts.add(new ActivityEntry(getString(R.string.activityTitle_viewPager), ViewPagerActivity.class));
 		texts.add(new ActivityEntry(getString(R.string.activityTitle_floatingWindow), FloatingWindowActivity.class));
 		texts.add(new ActivityEntry(getString(R.string.activityTitle_gallery), GalleryActivity.class));
+		texts.add(new ActivityEntry(getString(R.string.activityTitle_drawerLayout), DrawerLayoutActivity.class));
 		
 		setTexts(texts);
 		super.onInitData(savedInstanceState);

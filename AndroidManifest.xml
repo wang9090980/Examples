@@ -46,7 +46,7 @@
         </activity>
        	<activity android:name="me.xiaopan.examples.android.activity.AnimationsActivity" android:label="@string/activityTitle_animations"/>
        	<activity android:name="me.xiaopan.examples.android.activity.custom.CustomEditTextActivity" android:label="@string/activityTitle_customEditText"/>
-    	<activity android:name="me.xiaopan.examples.android.activity.CustomsActivity" android:label="@string/activityTitle_custom"/>
+    	<activity android:name="me.xiaopan.examples.android.activity.CustomWidgetsActivity" android:label="@string/activityTitle_customWidgets"/>
        	<activity android:name="me.xiaopan.examples.android.activity.custom.PicturePlayerActivity" android:label="@string/activityTitle_picturePlayer"/>
        	<activity android:name="me.xiaopan.examples.android.activity.custom.ReboundListActivity" android:label="@string/activityTitle_reboundListView"/>
        	<activity android:name="me.xiaopan.examples.android.activity.custom.SlideTabHostActivity" android:label="@string/activityTitle_slideTabHost"/>
@@ -66,7 +66,7 @@
        	<activity android:name="me.xiaopan.examples.android.activity.view.TabHostActivity" android:label="@string/activityTitle_tabHost"/>
        	<activity android:name="me.xiaopan.examples.android.activity.view.TabContentActivity"/>
       	<activity android:name="me.xiaopan.examples.android.activity.view.ViewPagerActivity" android:label="@string/activityTitle_viewPager"/>
-   		<activity android:name="me.xiaopan.examples.android.activity.ViewsActivity" android:label="@string/activityTitle_views"/>
+   		<activity android:name="me.xiaopan.examples.android.activity.WidgetsActivity" android:label="@string/activityTitle_widgets"/>
    		<activity android:name="me.xiaopan.examples.android.activity.view.FragmentTabHostActivity" android:label="@string/activityTitle_fragmentTabHost"/>
   		<activity android:name="me.xiaopan.examples.android.activity.view.FloatingWindowActivity" android:label="@string/activityTitle_floatingWindow"/>
   		<activity android:name="me.xiaopan.examples.android.activity.view.GalleryActivity" android:label="@string/activityTitle_gallery"/>

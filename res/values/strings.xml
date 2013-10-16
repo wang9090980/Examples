@@ -3,25 +3,26 @@
 <resources>
     <string name="app_name">Examples</string>
 
-    <string name="activityTitle_animations">动画</string>
-    <string name="activityTitle_custom">自定义视图</string>
+    <string name="activityTitle_animations">Animations</string>
+    <string name="activityTitle_customWidgets">Custom Widgets</string>
+	<string name="activityTitle_graphics">Graphics</string>
+	<string name="activityTitle_medias">Medias</string>
+	<string name="activityTitle_others">Others</string>
+    <string name="activityTitle_widgets">Widgets</string>
+    
     <string name="activityTitle_customEditText">自定义文本编辑器</string>
     <string name="activityTitle_picturePlayer">自动播放画廊</string>
     <string name="activityTitle_reboundListView">反弹列表</string>
     <string name="activityTitle_superListView">下拉刷新列表（滚到底部自动加载更多）</string>
     <string name="activityTitle_slideTabHost">滑动选项卡</string>
 	<string name="activityTitle_slidingToggleButton">滑动开关按钮</string>
-	<string name="activityTitle_graphics">图形</string>
     <string name="activityTitle_cameraPreview">相机预览</string>
 	<string name="activityTitle_clipDrawable">Clip Drawable</string>
 	<string name="activityTitle_rotateDrawable">Rotate Drawable</string>
-	<string name="activityTitle_medias">多媒体</string>
-	<string name="activityTitle_others">其它</string>
    	<string name="activityTitle_accessNetwork">访问网络</string>
    	<string name="activityTitle_downloadImage">下载图片</string>
     <string name="activityTitle_imageLoader">图片批量加载器</string>
     <string name="activityTitle_floatingWindow">悬浮窗</string>
-    <string name="activityTitle_views">Views</string>
 	<string name="activityTitle_progressBar">ProgressBar</string>
     <string name="activityTitle_tabHost">TabHost</string>
     <string name="activityTitle_fragmentTabHost">FragmentTabHost</string>

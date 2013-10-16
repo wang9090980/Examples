@@ -32,7 +32,7 @@ import android.os.Bundle;
 /**
  * 自定义组件或特效界面
  */
-public class CustomsActivity extends BaseActivtyEntryActivity{
+public class CustomWidgetsActivity extends BaseActivtyEntryActivity{
 
 	@Override
 	public void onInitData(Bundle savedInstanceState) {

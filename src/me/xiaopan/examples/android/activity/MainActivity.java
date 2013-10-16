@@ -38,8 +38,8 @@ public class MainActivity extends BaseActivtyEntryActivity{
 		texts.add(new ActivityEntry(getString(R.string.activityTitle_animations), AnimationsActivity.class));
 		texts.add(new ActivityEntry(getString(R.string.activityTitle_graphics), GraphicsActivity.class));
 		texts.add(new ActivityEntry(getString(R.string.activityTitle_medias), MediasActivity.class));
-		texts.add(new ActivityEntry(getString(R.string.activityTitle_views), ViewsActivity.class));
-		texts.add(new ActivityEntry(getString(R.string.activityTitle_custom), CustomsActivity.class));
+		texts.add(new ActivityEntry(getString(R.string.activityTitle_widgets), WidgetsActivity.class));
+		texts.add(new ActivityEntry(getString(R.string.activityTitle_customWidgets), CustomWidgetsActivity.class));
 		texts.add(new ActivityEntry(getString(R.string.activityTitle_others), OthersActivity.class));
 		
 		setTexts(texts);

@@ -32,7 +32,7 @@ import android.os.Bundle;
 /**
  * 系统组件使用示例
  */
-public class ViewsActivity extends BaseActivtyEntryActivity{
+public class WidgetsActivity extends BaseActivtyEntryActivity{
 
 	@Override
 	public void onInitData(Bundle savedInstanceState) {

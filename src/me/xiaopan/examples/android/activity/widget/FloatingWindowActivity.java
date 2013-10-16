@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package me.xiaopan.examples.android.activity.view;
+package me.xiaopan.examples.android.activity.widget;
 
 import me.xiaopan.examples.android.MyBaseActivity;
 import me.xiaopan.examples.android.R;

@@ -13,33 +13,36 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package me.xiaopan.examples.android.activity.view;
+package me.xiaopan.examples.android.activity.widget;
 
-import me.xiaopan.examples.android.MyBaseActivity;
+import me.xiaopan.examples.android.MyBaseFragmentActivity;
 import me.xiaopan.examples.android.R;
-import me.xiaopan.examples.android.adapter.GalleryAdapter;
+import me.xiaopan.examples.android.adapter.ImageFragmentPagerAdapter;
 import android.os.Bundle;
-import android.widget.Gallery;
+import android.support.v4.view.PagerTabStrip;
+import android.support.v4.view.ViewPager;
 
-/**
- * 画廊使用示例
- */
-@SuppressWarnings("deprecation")
-public class GalleryActivity extends MyBaseActivity {
-	private Gallery gallery;
+public class ViewPagerActivity extends MyBaseFragmentActivity {
+	private ViewPager viewPager;
+	private PagerTabStrip pagerTabStrip;
 	
 	@Override
 	public void onInitLayout(Bundle savedInstanceState) {
-		setContentView(R.layout.activity_gallery);
-		gallery = (Gallery) findViewById(R.id.gallery_gallery);
+		setContentView(R.layout.activity_view_pager);
+		viewPager = (ViewPager) findViewById(R.id.viewPager_viewPager);
+		pagerTabStrip = (PagerTabStrip) findViewById(R.id.pagerTab_viewPager);
 	}
 
 	@Override
 	public void onInitListener(Bundle savedInstanceState) {
+		
 	}
 
 	@Override
 	public void onInitData(Bundle savedInstanceState) {
-		gallery.setAdapter(new GalleryAdapter(getBaseContext(), getStringArray(R.array.autoPlayGallery_urls2)));
+		viewPager.setAdapter(new ImageFragmentPagerAdapter(getSupportFragmentManager()));
+		pagerTabStrip.setTextColor(0xff00bfff);//设置标题的颜色
+		pagerTabStrip.setTabIndicatorColor(0xff00bfff);//设置滑块的颜色
+		viewPager.setOffscreenPageLimit(5);
 	}
 }

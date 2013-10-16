@@ -62,14 +62,14 @@
     	<activity android:name="me.xiaopan.examples.android.activity.other.ImageLoaderActivity" android:label="@string/activityTitle_imageLoader"/>
    		<activity android:name="me.xiaopan.examples.android.activity.OthersActivity" android:label="@string/activityTitle_others"/>
    		<activity android:name="me.xiaopan.examples.android.activity.other.TakeBusinessCardActivity" android:label="@string/activityTitle_takeBusinessCard"/>
-       	<activity android:name="me.xiaopan.examples.android.activity.view.ProgressBarActivity" android:label="@string/activityTitle_progressBar"/>
-       	<activity android:name="me.xiaopan.examples.android.activity.view.TabHostActivity" android:label="@string/activityTitle_tabHost"/>
-       	<activity android:name="me.xiaopan.examples.android.activity.view.TabContentActivity"/>
-      	<activity android:name="me.xiaopan.examples.android.activity.view.ViewPagerActivity" android:label="@string/activityTitle_viewPager"/>
+       	<activity android:name="me.xiaopan.examples.android.activity.widget.ProgressBarActivity" android:label="@string/activityTitle_progressBar"/>
+       	<activity android:name="me.xiaopan.examples.android.activity.widget.TabHostActivity" android:label="@string/activityTitle_tabHost"/>
+       	<activity android:name="me.xiaopan.examples.android.activity.widget.TabContentActivity"/>
+      	<activity android:name="me.xiaopan.examples.android.activity.widget.ViewPagerActivity" android:label="@string/activityTitle_viewPager"/>
    		<activity android:name="me.xiaopan.examples.android.activity.WidgetsActivity" android:label="@string/activityTitle_widgets"/>
-   		<activity android:name="me.xiaopan.examples.android.activity.view.FragmentTabHostActivity" android:label="@string/activityTitle_fragmentTabHost"/>
-  		<activity android:name="me.xiaopan.examples.android.activity.view.FloatingWindowActivity" android:label="@string/activityTitle_floatingWindow"/>
-  		<activity android:name="me.xiaopan.examples.android.activity.view.GalleryActivity" android:label="@string/activityTitle_gallery"/>
+   		<activity android:name="me.xiaopan.examples.android.activity.widget.FragmentTabHostActivity" android:label="@string/activityTitle_fragmentTabHost"/>
+  		<activity android:name="me.xiaopan.examples.android.activity.widget.FloatingWindowActivity" android:label="@string/activityTitle_floatingWindow"/>
+  		<activity android:name="me.xiaopan.examples.android.activity.widget.GalleryActivity" android:label="@string/activityTitle_gallery"/>
      		
     	<service android:name="me.xiaopan.examples.android.service.FloatingWindowService"/>
     </application>

@@ -17,7 +17,7 @@ package me.xiaopan.examples.android.service;
 
 import me.xiaopan.examples.android.MyApplication;
 import me.xiaopan.examples.android.R;
-import me.xiaopan.examples.android.activity.view.FloatingWindowActivity;
+import me.xiaopan.examples.android.activity.widget.FloatingWindowActivity;
 import android.app.Service;
 import android.content.Intent;
 import android.graphics.PixelFormat;

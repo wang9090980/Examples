@@ -19,12 +19,12 @@ import java.util.ArrayList;
 
 import me.xiaopan.examples.android.BaseActivtyEntryActivity;
 import me.xiaopan.examples.android.R;
-import me.xiaopan.examples.android.activity.view.FloatingWindowActivity;
-import me.xiaopan.examples.android.activity.view.FragmentTabHostActivity;
-import me.xiaopan.examples.android.activity.view.GalleryActivity;
-import me.xiaopan.examples.android.activity.view.ProgressBarActivity;
-import me.xiaopan.examples.android.activity.view.TabHostActivity;
-import me.xiaopan.examples.android.activity.view.ViewPagerActivity;
+import me.xiaopan.examples.android.activity.widget.FloatingWindowActivity;
+import me.xiaopan.examples.android.activity.widget.FragmentTabHostActivity;
+import me.xiaopan.examples.android.activity.widget.GalleryActivity;
+import me.xiaopan.examples.android.activity.widget.ProgressBarActivity;
+import me.xiaopan.examples.android.activity.widget.TabHostActivity;
+import me.xiaopan.examples.android.activity.widget.ViewPagerActivity;
 import me.xiaopan.examples.android.adapter.TextAdapter.Text;
 import me.xiaopan.examples.android.bean.ActivityEntry;
 import android.os.Bundle;

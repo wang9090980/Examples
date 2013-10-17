@@ -16,9 +16,6 @@
 package me.xiaopan.examples.android;
 
 import me.xiaopan.easy.android.app.BaseTabActivity;
-import me.xiaopan.easy.android.app.OnDoubleClickPromptExitListener;
-import me.xiaopan.easy.android.app.OnExceptionFinishActivityListener;
-import me.xiaopan.easy.android.app.OnNetworkVerifyListener;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -38,7 +35,7 @@ public abstract class MyBaseTabActivity extends BaseTabActivity {
 		setEnableCustomActivitySwitchAnimation(true);
 		setStartActivityAnimation(new int[]{R.anim.base_slide_to_left_in, R.anim.base_normal});
 		setFinishActivityAnimation(new int[]{R.anim.base_normal, R.anim.base_slide_to_right_out});
-		setOnNetworkVerifyListener(new OnNetworkVerifyListener() {
+		setOnNetworkVerifyFailureListener(new OnNetworkVerifyFailureListener() {
 			@Override
 			public void onVerifyFailure() {
 				toastL(R.string.toast_network_connectionException);				

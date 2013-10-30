@@ -27,8 +27,6 @@ import android.widget.Toast;
 
 /**
  * 应用程序异常处理器
- * @author xiaopan
- *
  */
 public class ApplicationExceptionHandler implements UncaughtExceptionHandler {
 	private Context context;

@@ -29,7 +29,7 @@ public abstract class MyBaseFragmentActivity extends BaseFragmentActivity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
-		ApplicationExceptionHandler.getInstance().setContext(this);
+//		ApplicationExceptionHandler.getInstance().setContext(this);
 		MobclickAgent.onError(this);
 		setEnableCustomActivitySwitchAnimation(true);
 		setStartActivityAnimation(new int[]{R.anim.base_slide_to_left_in, R.anim.base_normal});

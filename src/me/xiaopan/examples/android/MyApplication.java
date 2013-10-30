@@ -15,6 +15,7 @@
  */
 package me.xiaopan.examples.android;
 
+import me.xiaopan.easy.android.util.RebootThreadExceptionHandler;
 import me.xiaopan.easy.network.android.image.ImageLoader;
 import me.xiaopan.examples.android.util.ImageLoadOptionsFactory;
 import android.app.Application;
@@ -25,6 +26,7 @@ public class MyApplication extends Application {
 	@Override
 	public void onCreate() {
 		super.onCreate();
+		new RebootThreadExceptionHandler(getBaseContext(), "抱歉！程序出现一点小故障，将在1秒钟后重启");
 		com.umeng.common.Log.LOG = true;
 		ImageLoader.getInstance().init(getBaseContext(), ImageLoadOptionsFactory.getDefaultImageLoadOptions(getBaseContext()));	//初始化图片加载器
 	}

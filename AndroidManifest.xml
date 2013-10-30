@@ -76,6 +76,6 @@
     	
     	<meta-data android:name="UMENG_APPKEY" android:value="525e527a56240b4bde082b19"/>
     	<meta-data android:name="Channel ID" android:value="Google Play"/>
+    	<receiver android:name="me.xiaopan.easy.android.receiver.StartApplicationBrocastReceiver"/>
     </application>
-
 </manifest>

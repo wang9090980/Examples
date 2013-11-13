@@ -102,9 +102,14 @@ public abstract class MyBaseTabActivity extends BaseTabActivity {
 		}
 	}
 	
-	public void showLoadingHintView(View loadingHintView){
+	public void showLoadingHintView(final View loadingHintView){
 		if(loadingHintView != null){
-			loadingHintView.setVisibility(View.VISIBLE);
+			getHanlder().post(new Runnable() {
+				@Override
+				public void run() {
+					loadingHintView.setVisibility(View.VISIBLE);
+				}
+			});
 		}
 	}
 	
@@ -112,9 +117,14 @@ public abstract class MyBaseTabActivity extends BaseTabActivity {
 		showLoadingHintView(findViewById(loadingHintViewId));
 	}
 	
-	public void closeLoadingHintView(View loadingHintView){
+	public void closeLoadingHintView(final View loadingHintView){
 		if(loadingHintView != null){
-			ViewAnimationUtils.goneViewByAlpha(loadingHintView);
+			getHanlder().post(new Runnable() {
+				@Override
+				public void run() {
+					ViewAnimationUtils.goneViewByAlpha(loadingHintView);
+				}
+			});
 		}
 	}
 	

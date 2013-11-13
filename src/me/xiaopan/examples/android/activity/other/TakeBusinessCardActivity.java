@@ -10,16 +10,18 @@ import java.util.List;
 import me.xiaopan.easy.android.util.BitmapUtils;
 import me.xiaopan.easy.android.util.CameraManager;
 import me.xiaopan.easy.android.util.CameraOptimalSizeCalculator;
-import me.xiaopan.easy.android.util.CameraUtils;
 import me.xiaopan.easy.android.util.FileUtils;
+import me.xiaopan.easy.android.util.Utils;
 import me.xiaopan.easy.android.util.ViewAnimationUtils;
 import me.xiaopan.easy.java.util.IOUtils;
 import me.xiaopan.easy.java.util.StringUtils;
 import me.xiaopan.examples.android.MyBaseActivity;
 import me.xiaopan.examples.android.R;
+import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.CompressFormat;
 import android.graphics.BitmapFactory;
+import android.graphics.Point;
 import android.graphics.Rect;
 import android.hardware.Camera;
 import android.hardware.Camera.Size;
@@ -118,7 +120,7 @@ public class TakeBusinessCardActivity extends MyBaseActivity implements CameraMa
 				try {
 					/* 对裁剪后的图片进行缩小 */
 					sourceBitmap = BitmapFactory.decodeFile(localCacheFile.getPath());
-					finalBitmap = BitmapUtils.scale(sourceBitmap, businessCardWidth, businessCardHeight);	
+					finalBitmap = BitmapUtils.scaleByWidth(sourceBitmap, businessCardWidth);	
 					sourceBitmap.recycle();
 					
 					/* 将最终得到的图片输出到本地缓存文件中 */
@@ -290,13 +292,14 @@ public class TakeBusinessCardActivity extends MyBaseActivity implements CameraMa
 				sourceBitmap.recycle();
 			}else{
 				srcBitmap = BitmapFactory.decodeByteArray(data, 0, data.length);
-			}
+			} 
 			
 			/* 根据取景框对原图进行截取，只要取景框内的部分 */
 			if(cameraApertureRect == null){
 				Rect cameraApertureViewInSurfaceViewRect = new Rect();
 				cameraApertureView.getGlobalVisibleRect(cameraApertureViewInSurfaceViewRect);
-				cameraApertureRect = CameraUtils.computeFinderFrameRect(getBaseContext(), surfaceView.getWidth(), surfaceView.getHeight(), cameraApertureViewInSurfaceViewRect, cameraManager.getCamera().getParameters().getPictureSize());
+				Camera.Size pictureSize = cameraManager.getCamera().getParameters().getPictureSize();
+				cameraApertureRect = Utils.mappingRect(new Point(surfaceView.getWidth(), surfaceView.getHeight()), cameraApertureViewInSurfaceViewRect, new Point(pictureSize.width, pictureSize.height), getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE);
 			}
 			Bitmap cutBitmap = Bitmap.createBitmap(srcBitmap, cameraApertureRect.left, cameraApertureRect.top, cameraApertureRect.width(), cameraApertureRect.height());
 			srcBitmap.recycle();

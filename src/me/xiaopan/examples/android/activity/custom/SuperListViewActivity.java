@@ -114,7 +114,7 @@ public class SuperListViewActivity extends MyBaseActivity {
 	}
 	
 	public static final List<String> getStringsByCurrentDate(int number){
-		return getStrings(DateTimeUtils.getCurrentDateTimeByCustomFormat("yyyy年MM月dd日 HH点mm分ss秒")+" 第%s条", number);
+		return getStrings(DateTimeUtils.getCurrentDateTimeByFormat("yyyy年MM月dd日 HH点mm分ss秒")+" 第%s条", number);
 	}
 
 	@Override

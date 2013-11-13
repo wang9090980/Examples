@@ -16,12 +16,14 @@
 package me.xiaopan.examples.android;
 
 import me.xiaopan.easy.android.app.BaseActivity;
+import me.xiaopan.easy.android.util.ViewAnimationUtils;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.umeng.analytics.MobclickAgent;
 
-public abstract class MyBaseActivity extends BaseActivity {
+public abstract class MyBaseActivity extends BaseActivity{
 	private boolean hiddenTitleBar;
 	private boolean enableBackHome = true;
 	
@@ -34,29 +36,9 @@ public abstract class MyBaseActivity extends BaseActivity {
 		setEnableCustomActivitySwitchAnimation(true);
 		setStartActivityAnimation(new int[]{R.anim.base_slide_to_left_in, R.anim.base_normal});
 		setFinishActivityAnimation(new int[]{R.anim.base_normal, R.anim.base_slide_to_right_out});
-		setOnNetworkVerifyFailureListener(new OnNetworkVerifyFailureListener() {
-			@Override
-			public void onVerifyFailure() {
-				toastL(R.string.toast_network_connectionException);				
-			}
-		});
-		setOnDoubleClickPromptExitListener(new OnDoubleClickPromptExitListener() {
-			@Override
-			public void onPrompt() {
-				toastL(R.string.toast_exitHint);
-			}
-		});
-		setOnExceptionFinishActivityListener(new OnExceptionFinishActivityListener() {
-			@Override
-			public void onExceptionFinishActivity() {
-				finishActivity(R.anim.base_alpha_show, R.anim.base_alpha_hide);
-			}
-		});
-		
 		onInitLayout(savedInstanceState);
 		onInitListener(savedInstanceState);
 		onInitData(savedInstanceState);
-		
 		if(!hiddenTitleBar){
 			try{
 				getActionBar().setBackgroundDrawable(getDrawable(R.drawable.shape_titlebar));
@@ -91,12 +73,52 @@ public abstract class MyBaseActivity extends BaseActivity {
 		hiddenTitleBar = true;
 	}
 	
+	@Override
+	public void onDoubleClickPromptExit() {
+		toastL(R.string.toast_exitHint);
+	}
+	
 	public boolean isEnableBackHome() {
 		return enableBackHome;
 	}
 
 	public void setEnableBackHome(boolean enableBackHome) {
 		this.enableBackHome = enableBackHome;
+	}
+	
+	public void becauseExceptionFinishActivity(){
+		finishActivityByMinimumDuration(1000, R.anim.base_alpha_show, R.anim.base_alpha_hide);
+	}
+	
+	public boolean isNetworkAvailable(boolean notAvailableHint){
+		if(isNetworkAvailable()){
+			return true;
+		}else{
+			if(notAvailableHint){
+				toastL(R.string.toast_network_connectionException);	
+			}
+			return false;
+		}
+	}
+	
+	public void showLoadingHintView(View loadingHintView){
+		if(loadingHintView != null){
+			loadingHintView.setVisibility(View.VISIBLE);
+		}
+	}
+	
+	public void showLoadingHintView(int loadingHintViewId){
+		showLoadingHintView(findViewById(loadingHintViewId));
+	}
+	
+	public void closeLoadingHintView(View loadingHintView){
+		if(loadingHintView != null){
+			ViewAnimationUtils.goneViewByAlpha(loadingHintView);
+		}
+	}
+	
+	public void closeLoadingHintView(int loadingHintViewId){
+		closeLoadingHintView(findViewById(loadingHintViewId));
 	}
 
 	public void showLoadingHintView(){

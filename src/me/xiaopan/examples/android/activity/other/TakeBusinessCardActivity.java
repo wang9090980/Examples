@@ -64,7 +64,7 @@ public class TakeBusinessCardActivity extends MyBaseActivity implements CameraMa
 	private List<String> supportedFlashModes;	//当前设备支持的闪光模式
 	private CameraManager cameraManager;	//相机管理器
 	private int businessCardWidth = 648;
-	private int businessCardHeight = 388;
+//	private int businessCardHeight = 388;
 	
 	@Override
 	public void onInitLayout(Bundle savedInstanceState) {
@@ -202,7 +202,7 @@ public class TakeBusinessCardActivity extends MyBaseActivity implements CameraMa
 		
 		/* 初始化名片的宽高 */
 		businessCardWidth = getIntent().getIntExtra(PARAM_OPTIONAL_INT_BUSINESS_CARD_WIDTH, 648);
-		businessCardHeight = (int) (businessCardWidth/1.67);
+//		businessCardHeight = (int) (businessCardWidth/1.67);
 		
 		/* 初始化相机关机器以及按钮 */
 		cameraManager = new CameraManager(this, surfaceView.getHolder(), this);

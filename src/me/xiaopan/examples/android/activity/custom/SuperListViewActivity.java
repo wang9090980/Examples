@@ -103,6 +103,7 @@ public class SuperListViewActivity extends MyBaseActivity {
 	@Override
 	public void onInitData(Bundle savedInstanceState) {
 		superListView.setAdapter(simpleAdapter = new StringAdapter(getBaseContext(), contents = getStringsByCurrentDate(5)));
+		superListView.refresh();
 	}
 	
 	public static final List<String> getStrings(String formatString, int number){

@@ -14,6 +14,7 @@ local.properties
 # Eclipse project files
 #.classpath
 #.project
+#.settings/
 bin/
 gen/
 

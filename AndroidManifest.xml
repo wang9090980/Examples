@@ -4,7 +4,7 @@
     android:versionCode="100"
     android:versionName="1.0.0" >
 
-    <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="18" />
+    <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="19" />
 
     <!-- 声明要使用的权限 -->
 	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
@@ -62,6 +62,7 @@
     	<activity android:name="me.xiaopan.examples.android.activity.other.ImageLoaderActivity" android:label="@string/activityTitle_imageLoader"/>
    		<activity android:name="me.xiaopan.examples.android.activity.OthersActivity" android:label="@string/activityTitle_others"/>
    		<activity android:name="me.xiaopan.examples.android.activity.other.TakeBusinessCardActivity" android:label="@string/activityTitle_takeBusinessCard"/>
+  		<activity android:name="me.xiaopan.examples.android.activity.other.TTSActivity" android:label="@string/activityTitle_ttsActivity"/>
        	<activity android:name="me.xiaopan.examples.android.activity.widget.ProgressBarActivity" android:label="@string/activityTitle_progressBar"/>
        	<activity android:name="me.xiaopan.examples.android.activity.widget.TabHostActivity" android:label="@string/activityTitle_tabHost"/>
        	<activity android:name="me.xiaopan.examples.android.activity.widget.TabContentActivity"/>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/body">
+    <!-- 正文内容 -->
+    <LinearLayout style="@style/body_content_padding">
+  		<EditText style="@style/base_match_weight" android:gravity="top|left" android:id="@+id/edit_tts" android:text="It is a fine day today, my mood is also very good! "/>
+  		<Button style="@style/button_match" android:text="@string/button_speak" android:id="@+id/button_tts"/>
+    </LinearLayout>
+    
+	<!-- 阴影 -->
+    <include layout="@layout/include_shadow_down"/>
+</FrameLayout>

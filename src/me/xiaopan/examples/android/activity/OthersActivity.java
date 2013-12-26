@@ -22,6 +22,7 @@ import me.xiaopan.examples.android.R;
 import me.xiaopan.examples.android.activity.other.AccessNetworkActivity;
 import me.xiaopan.examples.android.activity.other.DownloadImageActivity;
 import me.xiaopan.examples.android.activity.other.ImageLoaderActivity;
+import me.xiaopan.examples.android.activity.other.TTSActivity;
 import me.xiaopan.examples.android.activity.other.TakeBusinessCardActivity;
 import me.xiaopan.examples.android.adapter.TextAdapter.Text;
 import me.xiaopan.examples.android.bean.ActivityEntry;
@@ -40,6 +41,7 @@ public class OthersActivity extends BaseActivtyEntryActivity{
 		
 		texts.add(new ActivityEntry(getString(R.string.activityTitle_takeBusinessCard), TakeBusinessCardActivity.class));
 		texts.add(new ActivityEntry(getString(R.string.activityTitle_imageLoader), ImageLoaderActivity.class));
+		texts.add(new ActivityEntry(getString(R.string.activityTitle_ttsActivity), TTSActivity.class));
 		
 		setTexts(texts);
 		super.onInitData(savedInstanceState);

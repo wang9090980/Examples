@@ -30,6 +30,7 @@
     <string name="activityTitle_gallery">Gallery</string>
     <string name="activityTitle_drawerLayout">滑动抽屉</string>
     <string name="activityTitle_takeBusinessCard">拍名片</string>
+    <string name="activityTitle_ttsActivity">TTS文本朗读</string>
     
     <string name="editHint_name">请输入姓名</string>
     <string name="editHint_account">请输入手机号或邮箱</string>
@@ -137,6 +138,7 @@
 	<string name="button_rotateDrawable_stopRotary">停止旋转</string>
 	<string name="button_takePictures_take">拍摄</string>
 	<string name="button_takePictures_remake">重拍</string>
+	<string name="button_speak">朗读</string>
     
 	<string name="tabTitle_tab1">选项卡1</string>
 	<string name="tabTitle_tab2">选项卡2</string>

@@ -8,11 +8,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import me.xiaopan.easy.android.util.BitmapUtils;
-import me.xiaopan.easy.android.util.CameraManager;
-import me.xiaopan.easy.android.util.CameraOptimalSizeCalculator;
 import me.xiaopan.easy.android.util.FileUtils;
-import me.xiaopan.easy.android.util.Utils;
+import me.xiaopan.easy.android.util.RectUtils;
 import me.xiaopan.easy.android.util.ViewAnimationUtils;
+import me.xiaopan.easy.android.util.camera.CameraManager;
+import me.xiaopan.easy.android.util.camera.CameraManager.CamreaBeingUsedException;
+import me.xiaopan.easy.android.util.camera.CameraOptimalSizeCalculator;
 import me.xiaopan.easy.java.util.IOUtils;
 import me.xiaopan.easy.java.util.StringUtils;
 import me.xiaopan.examples.android.MyBaseActivity;
@@ -214,7 +215,13 @@ public class TakeBusinessCardActivity extends MyBaseActivity implements CameraMa
 	@Override
 	public void onResume() {
 		super.onResume();
-		cameraManager.openBackCamera();
+		try {
+			cameraManager.openBackCamera(true);
+		} catch (CamreaBeingUsedException e) {
+			e.printStackTrace();
+			toastL(R.string.toast_cameraOpenFailed);
+			becauseExceptionFinishActivity();
+		}
 	}
 
 	@Override
@@ -252,12 +259,6 @@ public class TakeBusinessCardActivity extends MyBaseActivity implements CameraMa
 		cameraParameters.setPictureSize(optimalSizes[1].width, optimalSizes[1].height);
 		
 		camera.setParameters(cameraParameters);
-	}
-
-	@Override
-	public void onOpenCameraException(Exception e) {
-		toastL(R.string.toast_cameraOpenFailed);
-		becauseExceptionFinishActivity();
 	}
 
 	@Override
@@ -299,7 +300,7 @@ public class TakeBusinessCardActivity extends MyBaseActivity implements CameraMa
 				Rect cameraApertureViewInSurfaceViewRect = new Rect();
 				cameraApertureView.getGlobalVisibleRect(cameraApertureViewInSurfaceViewRect);
 				Camera.Size pictureSize = cameraManager.getCamera().getParameters().getPictureSize();
-				cameraApertureRect = Utils.mappingRect(new Point(surfaceView.getWidth(), surfaceView.getHeight()), cameraApertureViewInSurfaceViewRect, new Point(pictureSize.width, pictureSize.height), getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE);
+				cameraApertureRect = RectUtils.mappingRect(cameraApertureViewInSurfaceViewRect, new Point(surfaceView.getWidth(), surfaceView.getHeight()), new Point(pictureSize.width, pictureSize.height), getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT);
 			}
 			Bitmap cutBitmap = Bitmap.createBitmap(srcBitmap, cameraApertureRect.left, cameraApertureRect.top, cameraApertureRect.width(), cameraApertureRect.height());
 			srcBitmap.recycle();

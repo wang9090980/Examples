@@ -18,8 +18,9 @@ package me.xiaopan.examples.android.activity.graphics;
 import java.util.ArrayList;
 import java.util.List;
 
-import me.xiaopan.easy.android.util.CameraManager;
-import me.xiaopan.easy.android.util.CameraOptimalSizeCalculator;
+import me.xiaopan.easy.android.util.camera.CameraManager;
+import me.xiaopan.easy.android.util.camera.CameraManager.CamreaBeingUsedException;
+import me.xiaopan.easy.android.util.camera.CameraOptimalSizeCalculator;
 import me.xiaopan.examples.android.MyBaseActivity;
 import me.xiaopan.examples.android.R;
 import android.hardware.Camera;
@@ -80,7 +81,13 @@ public class CameraPreviewActivity extends MyBaseActivity implements CameraManag
 	@Override
 	public void onResume() {
 		super.onResume();
-		cameraManager.openBackCamera();
+		try {
+			cameraManager.openBackCamera(true);
+		} catch (CamreaBeingUsedException e) {
+			e.printStackTrace();
+			toastL(R.string.toast_cameraOpenFailed);
+			becauseExceptionFinishActivity();
+		}
 	}
 
 	@Override
@@ -118,12 +125,6 @@ public class CameraPreviewActivity extends MyBaseActivity implements CameraManag
 		cameraParameters.setPictureSize(optimalSizes[1].width, optimalSizes[1].height);
 		
 		camera.setParameters(cameraParameters);
-	}
-
-	@Override
-	public void onOpenCameraException(Exception e) {
-		toastL(R.string.toast_cameraOpenFailed);
-		becauseExceptionFinishActivity();
 	}
 
 	@Override

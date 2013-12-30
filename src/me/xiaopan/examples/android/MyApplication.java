@@ -15,9 +15,10 @@
  */
 package me.xiaopan.examples.android;
 
+import me.xiaoapn.easy.imageloader.AlphaScaleShowAnimationListener;
+import me.xiaoapn.easy.imageloader.ImageLoader;
+import me.xiaoapn.easy.imageloader.Options;
 import me.xiaopan.easy.android.util.RebootThreadExceptionHandler;
-import me.xiaopan.easy.network.android.image.ImageLoader;
-import me.xiaopan.examples.android.util.ImageLoadOptionsFactory;
 import android.app.Application;
 
 public class MyApplication extends Application {
@@ -28,7 +29,12 @@ public class MyApplication extends Application {
 		super.onCreate();
 		new RebootThreadExceptionHandler(getBaseContext(), "抱歉！程序出现一点小故障，将在1秒钟后重启");
 		com.umeng.common.Log.LOG = true;
-		ImageLoader.getInstance().init(getBaseContext(), ImageLoadOptionsFactory.getDefaultImageLoadOptions(getBaseContext()));	//初始化图片加载器
+		
+		//初始化默认的Options，当调用ImageLoader.getInstance().load()方法却没有指定Options的时候会默认使用此Options
+		Options defaultOptions = ImageLoader.getInstance().getConfiguration().getDefaultOptions();
+		defaultOptions.setLoadingImageResource(R.drawable.image_loading);	//设置加载中显示的图片
+		defaultOptions.setLoadFailureImageResource(R.drawable.image_load_failure); 	//设置加载失败时显示的图片
+		defaultOptions.setShowAnimationListener(new AlphaScaleShowAnimationListener());
 	}
 
 	public boolean isFloatingWindowDisplay() {

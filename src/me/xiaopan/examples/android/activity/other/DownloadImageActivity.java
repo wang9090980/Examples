@@ -15,8 +15,8 @@
  */
 package me.xiaopan.examples.android.activity.other;
 
-import me.xiaopan.easy.network.android.http.DownloadImageAsyncTask;
-import me.xiaopan.easy.network.android.http.DownloadImageAsyncTask.DownloadImageListener;
+import me.xiaopan.easy.network.http.DownloadImageAsyncTask;
+import me.xiaopan.easy.network.http.DownloadImageAsyncTask.DownloadImageListener;
 import me.xiaopan.examples.android.MyBaseActivity;
 import me.xiaopan.examples.android.R;
 import android.content.Context;

@@ -15,9 +15,10 @@
  */
 package me.xiaopan.examples.android.net.request;
 
-import me.xiaopan.easy.network.android.http.Host;
-import me.xiaopan.easy.network.android.http.Path;
-import me.xiaopan.easy.network.android.http.Request;
+import me.xiaopan.easy.network.http.Request;
+import me.xiaopan.easy.network.http.annotation.Host;
+import me.xiaopan.easy.network.http.annotation.Path;
+
 
 
 @Host("http://www.weather.com.cn/data/cityinfo")

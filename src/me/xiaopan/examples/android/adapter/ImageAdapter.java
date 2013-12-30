@@ -15,10 +15,9 @@
  */
 package me.xiaopan.examples.android.adapter;
 
+import me.xiaoapn.easy.imageloader.ImageLoader;
 import me.xiaopan.easy.android.widget.MyBaseAdapter;
-import me.xiaopan.easy.network.android.image.ImageLoader;
 import me.xiaopan.examples.android.R;
-import me.xiaopan.examples.android.util.ImageLoadOptionsFactory;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -48,7 +47,7 @@ public class ImageAdapter extends MyBaseAdapter {
 			viewHolder = (ViewHolder) convertView.getTag();
 		}
 		
-		ImageLoader.getInstance().load(imageUrls[realPosition], viewHolder.image, ImageLoadOptionsFactory.getListImageLoadOptions(getContext()));
+		ImageLoader.getInstance().load(imageUrls[realPosition], viewHolder.image);
 		choiceButtonHandle(viewHolder.choiceButton, realPosition);
 		return convertView;
 	}

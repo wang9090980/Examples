@@ -15,12 +15,11 @@
  */
 package me.xiaopan.examples.android.net.response;
 
-import me.xiaopan.easy.network.android.http.ResponseBodyKey;
+import me.xiaopan.easy.network.http.annotation.ResponseBody;
 
 import com.google.gson.annotations.Expose;
 
-
-@ResponseBodyKey("weatherinfo")
+@ResponseBody("weatherinfo")
 public class WeatherResponse{
 	@Expose
 	private String city;

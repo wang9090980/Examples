@@ -31,6 +31,8 @@
     <string name="activityTitle_drawerLayout">滑动抽屉</string>
     <string name="activityTitle_takeBusinessCard">拍名片</string>
     <string name="activityTitle_ttsActivity">TTS文本朗读</string>
+    <string name="activityTitle_multiFragment">多屏ViewPager</string>
+    <string name="activityTitle_playSound">播放音效</string>
     
     <string name="editHint_name">请输入姓名</string>
     <string name="editHint_account">请输入手机号或邮箱</string>

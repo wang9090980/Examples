@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <TableRow>
+		<Button style="@style/button" android:text="报警" android:id="@+id/button_playSound_warning"/>
+		<Button style="@style/button" android:text="报警2次" android:id="@+id/button_playSound_warning2"/>
+		<Button style="@style/button" android:text="停止报警" android:id="@+id/button_playSound_stopWarning"/>
+    </TableRow>
+</TableLayout>

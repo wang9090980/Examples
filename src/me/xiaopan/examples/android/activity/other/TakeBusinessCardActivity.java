@@ -351,15 +351,15 @@ public class TakeBusinessCardActivity extends MyBaseActivity implements CameraMa
 	 */
 	private void setFlashModeImageButton(String falshMode){
 		if(Camera.Parameters.FLASH_MODE_AUTO.equals(falshMode)){
-			flashModeButton.setCompoundDrawablesWithIntrinsicBounds(getDrawable(R.drawable.icon_flash_auto), null, null, null);
+			flashModeButton.setCompoundDrawablesWithIntrinsicBounds(getDrawable(R.drawable.ic_flash_auto), null, null, null);
 			flashModeButton.setTag(Camera.Parameters.FLASH_MODE_AUTO);
 			flashModeButton.setText(R.string.base_auto);
 		}else if(Camera.Parameters.FLASH_MODE_OFF.equals(falshMode)){
-			flashModeButton.setCompoundDrawablesWithIntrinsicBounds(getDrawable(R.drawable.icon_flash_off), null, null, null);
+			flashModeButton.setCompoundDrawablesWithIntrinsicBounds(getDrawable(R.drawable.ic_flash_off), null, null, null);
 			flashModeButton.setTag(Camera.Parameters.FLASH_MODE_OFF);
 			flashModeButton.setText(R.string.base_close);
 		}else if(Camera.Parameters.FLASH_MODE_ON.equals(falshMode)){
-			flashModeButton.setCompoundDrawablesWithIntrinsicBounds(getDrawable(R.drawable.icon_flash_on), null, null, null);
+			flashModeButton.setCompoundDrawablesWithIntrinsicBounds(getDrawable(R.drawable.ic_flash_on), null, null, null);
 			flashModeButton.setTag(Camera.Parameters.FLASH_MODE_ON);
 			flashModeButton.setText(R.string.base_open);
 		}

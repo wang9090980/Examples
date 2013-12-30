@@ -23,6 +23,7 @@ import me.xiaopan.examples.android.activity.widget.DrawerLayoutActivity;
 import me.xiaopan.examples.android.activity.widget.FloatingWindowActivity;
 import me.xiaopan.examples.android.activity.widget.FragmentTabHostActivity;
 import me.xiaopan.examples.android.activity.widget.GalleryActivity;
+import me.xiaopan.examples.android.activity.widget.MultiFragmentViewPagerActivity;
 import me.xiaopan.examples.android.activity.widget.ProgressBarActivity;
 import me.xiaopan.examples.android.activity.widget.TabHostActivity;
 import me.xiaopan.examples.android.activity.widget.ViewPagerActivity;
@@ -45,6 +46,7 @@ public class WidgetsActivity extends BaseActivtyEntryActivity{
 		texts.add(new ActivityEntry(getString(R.string.activityTitle_floatingWindow), FloatingWindowActivity.class));
 		texts.add(new ActivityEntry(getString(R.string.activityTitle_gallery), GalleryActivity.class));
 		texts.add(new ActivityEntry(getString(R.string.activityTitle_drawerLayout), DrawerLayoutActivity.class));
+		texts.add(new ActivityEntry(getString(R.string.activityTitle_multiFragment), MultiFragmentViewPagerActivity.class));
 		
 		setTexts(texts);
 		super.onInitData(savedInstanceState);

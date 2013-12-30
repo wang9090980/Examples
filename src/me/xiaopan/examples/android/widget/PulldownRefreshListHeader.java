@@ -37,7 +37,7 @@ public class PulldownRefreshListHeader extends BasePulldownRefershListHeader {
 	@Override
 	public void onToggleToNormalState() {
 		imageView.setVisibility(View.VISIBLE);
-		imageView.setImageResource(R.drawable.icon_pull_down);
+		imageView.setImageResource(R.drawable.ic_pull_down);
 		progressBar.setVisibility(View.INVISIBLE);
 		refreshHintText.setText("下拉刷新");
 		invalidate();

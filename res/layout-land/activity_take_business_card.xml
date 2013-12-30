@@ -13,7 +13,7 @@
 	                style="@style/base_wrap_wrap"
 	                android:id="@+id/button_takeBusinessCard_flashMode" 
 			        android:background="@drawable/button_flashlight_normal"
-			        android:drawableLeft="@drawable/icon_flash_off" 
+			        android:drawableLeft="@drawable/ic_flash_off" 
 			        android:textColor="@color/base_black"
 			        android:text="@string/base_close"
 			        android:layout_gravity="right"
@@ -61,7 +61,7 @@
 	          	<LinearLayout style="@style/base_wrap_weight" android:gravity="center">
 		          	<ImageButton 
 		          	    android:id="@+id/button_takeBusinessCard_shutter" 
-		          	    android:src="@drawable/icon_camera_theme" 
+		          	    android:src="@drawable/ic_camera_theme" 
 	          	    	android:layout_width="40dp"
 	          	    	android:layout_height="85dp"
 		          	    android:gravity="center"

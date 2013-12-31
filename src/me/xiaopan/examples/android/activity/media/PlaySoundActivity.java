@@ -6,6 +6,7 @@ import me.xiaopan.examples.android.MyBaseActivity;
 import me.xiaopan.examples.android.R;
 import android.media.AudioManager;
 import android.media.SoundPool;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -24,24 +25,45 @@ public class PlaySoundActivity extends MyBaseActivity {
 
 	@Override
 	public void onInitListener(Bundle savedInstanceState) {
-		findViewById(R.id.button_playSound_warning).setOnClickListener(new OnClickListener() {
+		findViewById(R.id.button_playSound_beep).setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				play(Sound.WARNING);
+				play(Sound.BEEP);
 			}
 		});
 		
-		findViewById(R.id.button_playSound_warning2).setOnClickListener(new OnClickListener() {
+		findViewById(R.id.button_playSound_beep2).setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				play(Sound.WARNING, 2);
+				play(Sound.BEEP, 1);
 			}
 		});
 		
-		findViewById(R.id.button_playSound_stopWarning).setOnClickListener(new OnClickListener() {
+		findViewById(R.id.button_playSound_stopBeep).setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				stop(Sound.WARNING);
+				stop(Sound.BEEP);
+			}
+		});
+		
+		findViewById(R.id.button_playSound_closeDoor).setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				play(Sound.CLOSE_DOOR);
+			}
+		});
+		
+		findViewById(R.id.button_playSound_closeDoor2).setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				play(Sound.CLOSE_DOOR, 1);
+			}
+		});
+		
+		findViewById(R.id.button_playSound_stopCloseDoor).setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				stop(Sound.CLOSE_DOOR);
 			}
 		});
 	}
@@ -50,29 +72,46 @@ public class PlaySoundActivity extends MyBaseActivity {
 	public void onInitData(Bundle savedInstanceState) {
 		soundPool = new SoundPool(2, AudioManager.STREAM_MUSIC, 100);
 		soundMap = new EnumMap<Sound, Integer>(Sound.class);
-		soundMap.put(Sound.WARNING, soundPool.load(getBaseContext(), R.raw.beep, 100));
+		soundMap.put(Sound.BEEP, soundPool.load(getBaseContext(), R.raw.beep, 100));
+		soundMap.put(Sound.CLOSE_DOOR, soundPool.load(getBaseContext(), R.raw.close_door, 100));
 	}
 	
 	private void play(Sound sound, int loop){
 		Integer soundId = soundMap.get(sound);
 		if(soundId != null){
-			soundPool.play(soundId, 100, 100, 100, loop, 1);
+			if(Build.VERSION.SDK_INT == Build.VERSION_CODES.JELLY_BEAN_MR2 && loop > 0){
+				for(int w = 0; w <= loop; w++){
+					soundPool.play(soundId, 100, 100, 100, 0, 1);
+					try {
+						Thread.sleep(500);
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+				}
+			}else{
+				soundPool.play(soundId, 100, 100, 100, loop, 1);
+			}
 		}
 	}
 	
 	private void play(Sound sound){
-		play(Sound.WARNING, 0);
+		play(sound, 0);
 	}
 	
 	private void stop(Sound sound){
 		Integer soundId = soundMap.get(sound);
 		if(soundId != null){
-			soundPool.stop(soundId);
+			soundPool.pause(soundId);
 		}
 	}
 	
 	private enum Sound{
-		WARNING;
+		BEEP, CLOSE_DOOR;
 	}
 
+	@Override
+	protected void onDestroy() {
+		soundPool.release();
+		super.onDestroy();
+	}
 }

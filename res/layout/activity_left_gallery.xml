@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/body">
+    <!-- 正文内容 -->
+    <LinearLayout style="@style/body_content_padding">
+ 		<me.xiaopan.examples.android.widget.LeftAlignGallery 
+ 		    style="@style/base_match_match" 
+ 		    android:id="@+id/leftGallery"
+ 		    android:spacing="10dp"/>
+    </LinearLayout>
+    
+	<!-- 阴影 -->
+    <include layout="@layout/include_shadow_down"/>
+</FrameLayout>

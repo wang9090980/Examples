@@ -74,6 +74,7 @@
   		<activity android:name="me.xiaopan.examples.android.activity.widget.GalleryActivity" android:label="@string/activityTitle_gallery"/>
   		<activity android:name="me.xiaopan.examples.android.activity.widget.DrawerLayoutActivity" android:label="@string/activityTitle_drawerLayout"/>
   		<activity android:name="me.xiaopan.examples.android.activity.widget.MultiFragmentViewPagerActivity" android:label="@string/activityTitle_multiFragment"/>
+  		<activity android:name="me.xiaopan.examples.android.activity.widget.LeftGalleryActivity" android:label="@string/activityTitle_leftGallery"/>
      		
     	<service android:name="me.xiaopan.examples.android.service.FloatingWindowService"/>
     	

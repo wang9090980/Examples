@@ -21,6 +21,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ImageView.ScaleType;
 
 /**
  * 图片碎片
@@ -34,6 +35,7 @@ public class ImageFragment extends BaseFragment {
 			int imageResId = getArguments().getInt(PARAM_REQIRED_INT_IMAGE_RES_ID, -1);
 			if(imageResId > -1){
 				ImageView imageView = new ImageView(getActivity().getBaseContext());
+				imageView.setScaleType(ScaleType.CENTER_CROP);
 				imageView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
 				imageView.setImageResource(imageResId);
 				return imageView;
